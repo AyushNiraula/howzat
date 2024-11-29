@@ -1,3 +1,5 @@
+import { Link } from "react-router"
+
 const Sidebar = () => {
     return (
         <>
@@ -5,10 +7,10 @@ const Sidebar = () => {
                 <div className="inner">
                     <nav>
                         <ul>
-                            <li><a href="#intro">Home</a></li>
-                            <li><a href="#one">Who we are</a></li>
-                            <li><a href="#two">What we do</a></li>
-                            <li><a href="#three">Get in touch</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/one">One</Link></li>
+                            <li><Link to="/two">Two</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
                         </ul>
                     </nav>
                 </div>

@@ -5,7 +5,8 @@ const Footer = () => {
             <footer id="footer" className="wrapper style1-alt">
                 <div className="inner">
                     <ul className="menu">
-                        <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        🥸 Developed By : <a href="https://github.com/AyushNiraula/" className="underline" target="_blank">Ayush Niraula</a> <br />
+                        🧑‍💻 Technology Used : React JS, Vite, TypeScript, TailwindCSS
                     </ul>
                 </div>
             </footer>
