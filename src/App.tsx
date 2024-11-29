@@ -1,11 +1,7 @@
 import './assets/css/tailwind.css';
 import './assets/css/main.css';
-import Sidebar from './components/Sidebar';
-import Match from './components/Match';
-import Footer from './components/Footer';
-import Contact from './components/Contact';
-import One from './components/One';
-import Two from './components/Two';
+import { Contact, Footer, Home, One, Sidebar, Two } from './components';
+
 
 function App() {
 
@@ -13,7 +9,7 @@ function App() {
     <>
       <Sidebar />
       <div id="wrapper">
-        <Match />
+        <Home />
         <One />
         <Two />
         <Contact />

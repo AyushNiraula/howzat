@@ -1,5 +1,5 @@
 
-const Match = () => {
+const Home = () => {
     return (
         <>
             <section id="intro" className="wrapper style1 fullscreen fade-up">
@@ -16,4 +16,4 @@ const Match = () => {
     )
 }
 
-export default Match
+export default Home
