@@ -1,7 +1,8 @@
 import './assets/css/tailwind.css';
 import './assets/css/main.css';
-import './assets/css/custom.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/custom.css';
+
 
 
 import { Contact, Footer, Home, Match, Sidebar, Two } from './components';

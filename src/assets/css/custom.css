@@ -8,3 +8,9 @@ footer{
     transition: all 0.3s ease-in-out; 
     cursor: pointer;
 }
+
+input::placeholder {
+    color: #6B7280 !important;  
+    opacity: 1 !important;      
+  }
+  

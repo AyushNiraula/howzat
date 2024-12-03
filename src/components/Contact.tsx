@@ -1,65 +1,120 @@
-import React from 'react'
+// import { useForm,  } from "react-hook-form";
+// import { emailPattern, passwordPattern } from "./shared/utils/ValidatorPattern";
+import { useForm, ValidationError } from '@formspree/react';
+
+
 
 const Contact = () => {
+
+    const [state, handleSubmit] = useForm("xldeaqzg");
+    if (state.succeeded) {
+        return alert('Success');
+    }
+
+    
+// const {register,handleSubmit, formState:{errors}} = useForm();
+
+// console.log(errors)
+
+  // Define the submit handler
+
     return (
-        <>
-            <section id="three" className="wrapper style1 fade-up">
-                <div className="inner">
-                    <h2>Get in touch</h2>
-                    <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-                    <div className="split style1">
-                        <section>
-                            <form method="post" action="#">
-                                <div className="fields">
-                                    <div className="field half">
-                                        <label htmlFor="name">Name</label>
-                                        <input type="text" name="name" id="name" />
-                                    </div>
-                                    <div className="field half">
-                                        <label htmlFor="email">Email</label>
-                                        <input type="text" name="email" id="email" />
-                                    </div>
-                                    <div className="field">
-                                        <label htmlFor="message">Message</label>
-                                        <textarea name="message" id="message" rows={5}></textarea>
-                                    </div>
-                                </div>
-                                <ul className="actions">
-                                    <li><a href="" className="button submit">Send Message</a></li>
-                                </ul>
-                            </form>
-                        </section>
-                        <section>
-                            <ul className="contact">
-                                <li>
-                                    <h3>Address</h3>
-                                    <span>12345 Somewhere Road #654<br />
-                                        Nashville, TN 00000-0000<br />
-                                        USA</span>
-                                </li>
-                                <li>
-                                    <h3>Email</h3>
-                                    <a href="#">user@untitled.tld</a>
-                                </li>
-                                <li>
-                                    <h3>Phone</h3>
-                                    <span>(000) 000-0000</span>
-                                </li>
-                                <li>
-                                    <h3>Social</h3>
-                                    <ul className="icons">
-                                        <li><a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
-                                        <li><a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
-                                        <li><a href="#" className="icon brands fa-github"><span className="label">GitHub</span></a></li>
-                                        <li><a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
-                                        <li><a href="#" className="icon brands fa-linkedin-in"><span className="label">LinkedIn</span></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-            </section>
+<>
+
+<section className="relative flex flex-wrap lg:h-screen lg:items-center">
+  <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+    <div className="mx-auto max-w-lg text-center">
+      <h1 className="text-2xl font-bold sm:text-3xl">Get in Touch !</h1>
+
+      <p className="mt-4 text-gray-500">
+      Have questions about our cricket app or need assistance? Fill out the form below, and we’ll get back to you as soon as possible. Whether it’s feedback, feature requests, or support, we’re here to help!
+
+      </p>
+    </div>
+
+    <form onSubmit={handleSubmit} className="mx-auto mb-0 mt-8 max-w-md space-y-4">
+      <div>
+        <label htmlFor="email" className="sr-only">Email</label>
+
+        <div className="relative">
+          <input 
+            type="email"
+            id="email"
+            name="email"
+            className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm placeholder-gray-500"
+            placeholder="Email..."
+          />
+
+
+        
+
+          <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
+            📧
+          </span>
+        </div>
+      </div>
+
+      <div>
+        <label htmlFor="subject" className="sr-only">Subject</label>
+
+        <div className="relative">
+          <input 
+            type="text"
+id='subject'            name='subject'
+            className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+            placeholder="Subject..."
+          />
+
+
+
+          <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
+            📗
+          </span>
+        </div>
+      </div>
+      <div>
+        <label htmlFor="password" className="sr-only">Subject</label>
+
+        <div className="relative">
+          <input 
+       id='message'
+       name='message'
+            type="text"
+            className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+            placeholder="Message..."
+          />
+
+
+
+          <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
+            📩
+          </span>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-between">
+        <p className="text-sm text-gray-500">
+          Let's Connect ! 👋
+        </p>
+
+        <button
+          type="submit"
+          className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+        >
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+    <img
+      alt=""
+      src="https://wallpapers.com/images/hd/virat-kohli-hd-jersey-p3bzd69l7glohwuq.jpg"
+      className="absolute inset-0 h-full w-full object-cover"
+    />
+  </div>
+</section>
         </>
     )
 }
