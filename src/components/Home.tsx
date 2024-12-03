@@ -1,5 +1,10 @@
+import useLoading from "./shared/hooks/UseLoader";
+import Loader from "./shared/Loader";
 
 const Home = () => {
+        // Loader
+        const isLoading = useLoading(1500);
+        if (isLoading) return <Loader />;
     return (
         <>
             {/* <section id="intro" className="wrapper style1 fullscreen fade-up">
