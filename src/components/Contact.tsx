@@ -1,15 +1,29 @@
 // import { useForm,  } from "react-hook-form";
 // import { emailPattern, passwordPattern } from "./shared/utils/ValidatorPattern";
 import { useForm, ValidationError } from '@formspree/react';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router';
+import { toast } from 'react-toastify';
 
 
 
 const Contact = () => {
 
     const [state, handleSubmit] = useForm("xldeaqzg");
-    if (state.succeeded) {
-        return alert('Success');
-    }
+
+    const navigate = useNavigate();
+  
+
+    useEffect(() => {
+      if (state.succeeded) {
+        toast.dismiss(); 
+        toast("Your message has been sent successfully !", { type: "success" });
+        navigate("/");
+
+      }
+    }, [state.succeeded]);
+
+
 
     
 // const {register,handleSubmit, formState:{errors}} = useForm();
@@ -115,6 +129,7 @@ id='subject'            name='subject'
     />
   </div>
 </section>
+
         </>
     )
 }

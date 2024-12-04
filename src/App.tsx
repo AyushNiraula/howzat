@@ -3,6 +3,7 @@
 import './assets/css/tailwind.css';
 import './assets/css/main.css';
 import './assets/css/custom.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -11,6 +12,7 @@ import { Route, Routes } from 'react-router';
 import MatchDetails from './components/MatchDetails';
 import MatchTable from './components/MatchTable';
 import Ranking from './components/Ranking';
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
 
         {/* Footer */}
         <Footer />
+        <ToastContainer />
+
       </div>
     </>
 
