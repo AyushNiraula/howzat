@@ -1,6 +1,7 @@
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './assets/css/tailwind.css';
 import './assets/css/main.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/custom.css';
 
 
@@ -9,6 +10,7 @@ import { Contact, Footer, Home, Match, Sidebar, Two } from './components';
 import { Route, Routes } from 'react-router';
 import MatchDetails from './components/MatchDetails';
 import MatchTable from './components/MatchTable';
+import Ranking from './components/Ranking';
 
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
             <Route path="/match" element={<Match />} />
             <Route path="/two" element={<Two />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/ranking" element={<Ranking />} />
             <Route path="/match/:matchType" element={<MatchDetails />} />
             <Route path="/match/:matchType/:seriesID" element={<MatchTable />} />
           </Routes>
