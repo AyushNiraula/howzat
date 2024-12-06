@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useGetIccRankingQuery } from "../services/RankingApi";
 import clsx from "clsx";
 import useLoading from "./shared/hooks/UseLoader";
