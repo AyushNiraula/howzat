@@ -620,7 +620,7 @@
 					-moz-flex-direction: row;
 					-webkit-flex-direction: row;
 					-ms-flex-direction: row;
-					flex-direction: row;
+					/* flex-direction: row; */
 					-moz-align-items: -moz-stretch;
 					-webkit-align-items: -webkit-stretch;
 					-ms-align-items: -ms-stretch;
@@ -667,8 +667,8 @@
 
 		@media screen and (max-width: 736px) {
 
-			#sidebar {
-				display: none;
+			#wrapper{
+				margin-top: 50px;
 			}
 
 		}

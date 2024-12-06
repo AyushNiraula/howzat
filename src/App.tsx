@@ -13,6 +13,7 @@ import MatchDetails from './components/MatchDetails';
 import MatchTable from './components/MatchTable';
 import Ranking from './components/Ranking';
 import { ToastContainer } from 'react-toastify';
+import Stats from './components/Stats';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/ranking" element={<Ranking />} />
             <Route path="/match/:matchType" element={<MatchDetails />} />
             <Route path="/match/:matchType/:seriesID" element={<MatchTable />} />
+            <Route path="/stats" element={<Stats />} />
           </Routes>
         </div>
 

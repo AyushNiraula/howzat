@@ -9,9 +9,9 @@ const MatchTable = () => {
     const { seriesID, matchType } = useParams();
 
 
-    const { data, isFetching, error } = useGetMatchInformationQuery('');
+    const { data, error } = useGetMatchInformationQuery('');
 
-    const [seriesDetails, setSeriesDetails] = useState(null)
+    const [seriesDetails, setSeriesDetails] = useState<any>(null)
     const [searchText, setSearchText] = useState('')
 
     console.log('la hai', seriesDetails)
@@ -45,7 +45,7 @@ const MatchTable = () => {
 
 
 
-    const handleSearchEvent = (event) => {
+    const handleSearchEvent = (event:any) => {
         console.log(event.target.value)
         setSearchText(event.target.value.toLowerCase())
     }
@@ -62,7 +62,7 @@ const MatchTable = () => {
             ?.seriesMatches
             .map((seriesMatch: any) =>
                 seriesMatch
-            ).find((eachSeries: any) => eachSeries?.seriesAdWrapper?.seriesId == seriesID)?.seriesAdWrapper?.matches.filter((response) => response?.matchInfo?.seriesName.toLowerCase().includes(searchText) || dateFormat(response?.matchInfo?.seriesStartDt).toLowerCase().includes(searchText) || response?.matchInfo?.status.toLowerCase().includes(searchText))
+            ).find((eachSeries: any) => eachSeries?.seriesAdWrapper?.seriesId == seriesID)?.seriesAdWrapper?.matches.filter((response:any) => response?.matchInfo?.seriesName.toLowerCase().includes(searchText) || dateFormat(response?.matchInfo?.seriesStartDt).toLowerCase().includes(searchText) || response?.matchInfo?.status.toLowerCase().includes(searchText))
 
 
         setSeriesDetails(filteredData)
@@ -130,7 +130,7 @@ const MatchTable = () => {
 
                                 {
 
-                                    seriesDetails?.map((response) => {
+                                    seriesDetails?.map((response:any) => {
                                         return <>
                                             <tr className="text-gray-700">
                                                 <td className="px-4 py-3 border">

@@ -1,6 +1,6 @@
 // import { useForm,  } from "react-hook-form";
 // import { emailPattern, passwordPattern } from "./shared/utils/ValidatorPattern";
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';

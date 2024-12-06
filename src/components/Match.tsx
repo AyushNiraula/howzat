@@ -3,7 +3,6 @@ import InformationCard from "./InformationCard";
 import viratImg from '../assets/images/virat.jpg'
 import Loader from "./shared/Loader";
 import useLoading from "./shared/hooks/UseLoader";
-import { useEffect } from "react";
 
 
 const Match = () => {

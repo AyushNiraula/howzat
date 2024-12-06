@@ -6,9 +6,9 @@ import Loader from "./shared/Loader";
 
 const MatchDetails = () => {
   const { matchType } = useParams();
-  const { data, isFetching, error } = useGetMatchInformationQuery('');
+  const { data, error } = useGetMatchInformationQuery('');
   const isLoading = useLoading(1500);
-  const [filteredMatch, setFilteredMatch] = useState(null);
+  const [filteredMatch, setFilteredMatch] = useState<any>(null);
   const navigate = useNavigate();
 
   useEffect(() => {

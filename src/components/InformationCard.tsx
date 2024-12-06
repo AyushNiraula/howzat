@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 
-const InformationCard = ({ matchInfo }) => {
+const InformationCard = ({ matchInfo }:{matchInfo:any}) => {
 
   const navigate = useNavigate();
 
