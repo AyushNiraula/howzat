@@ -1,27 +1,23 @@
 import { useGetMatchInformationQuery } from "../services/MatchApi";
 import InformationCard from "./InformationCard";
-import viratImg from '../assets/images/virat.jpg'
+import viratImg from "../assets/images/virat.jpg";
 import Loader from "./shared/Loader";
 import useLoading from "./shared/hooks/UseLoader";
 
-
 const Match = () => {
-  const { data, isFetching, error } = useGetMatchInformationQuery('');
+  const { data, isFetching, error } = useGetMatchInformationQuery("");
 
   // Loader
   const isLoading = useLoading(1500);
 
   if (isLoading) return <Loader />;
 
+  if (error) return <h1>Error</h1>;
 
-  if (error) return <h1>Error</h1>
-
-
-  console.log(data)
-  console.log(isFetching)
+  console.log(data);
+  console.log(isFetching);
 
   return (
-
     <>
       <div className="bg-gray-50 py-24 sm:py-6">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
@@ -31,12 +27,21 @@ const Match = () => {
 
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
                 <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p className="mt-2 text-lg font-bold tracking-tight text-gray-950 max-lg:text-center">Match Update</p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Here, you can explore various types of patches and find detailed information about each cricket match</p>
+                  <p className="mt-2 text-lg font-bold tracking-tight text-gray-950 max-lg:text-center">
+                    Match Update
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                    Here, you can explore various types of patches and find
+                    detailed information about each cricket match
+                  </p>
                 </div>
                 <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
                   <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                    <img className="size-full object-cover object-top" src={viratImg} alt="" />
+                    <img
+                      className="size-full object-cover object-top"
+                      src={viratImg}
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
@@ -45,17 +50,11 @@ const Match = () => {
             </div>
 
             {data?.typeMatches.map((match: any) => {
-              return <InformationCard matchInfo={match} />
+              return <InformationCard matchInfo={match} />;
             })}
-
-
-
-
           </div>
         </div>
       </div>
-
-
 
       {/* <section id="one" className="wrapper style2 spotlights">
                 <section>
@@ -95,9 +94,8 @@ const Match = () => {
                     </div>
                 </section>
             </section> */}
-
     </>
-  )
-}
+  );
+};
 
-export default Match
+export default Match;

@@ -1,16 +1,18 @@
 import { useNavigate } from "react-router";
 
-const InformationCard = ({ matchInfo }:{matchInfo:any}) => {
-
+const InformationCard = ({ matchInfo }: { matchInfo: any }) => {
   const navigate = useNavigate();
 
   const handleMatchCardClick = (matchType: string) => {
     navigate(`/match/${matchType}`);
-  }
+  };
 
   return (
     <>
-      <div className="card text-center information-card w-100 mx-auto" onClick={() => handleMatchCardClick(matchInfo?.matchType)}>
+      <div
+        className="card text-center information-card w-100 mx-auto"
+        onClick={() => handleMatchCardClick(matchInfo?.matchType)}
+      >
         <div className="card-header">
           <strong className="text-black">{matchInfo?.matchType}</strong>
         </div>
@@ -29,16 +31,13 @@ const InformationCard = ({ matchInfo }:{matchInfo:any}) => {
         </div>
         <div className="card-footer text-body-secondary">
           <div className="toast-header">
-
             <strong className="me-auto"> 🚀</strong>
             <small> See more...</small>
-          </div>  </div>
+          </div>{" "}
+        </div>
       </div>
-
-
-
     </>
-  )
-}
+  );
+};
 
-export default InformationCard
+export default InformationCard;
